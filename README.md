@@ -6,7 +6,9 @@ C to Rust Translation of Zopfli
 
 1. Rust: `cargo build --release`
 
-2. C: use `gcc` and build to output `zopfli` (in `c_code`)
+2. C: build the test binary using both `zopfli.c` and `zopfli_tests.c`:
+   `gcc zopfli.c zopfli_tests.c -o zopfli -lm` (run inside `c_code`)
+   The resulting `zopfli` binary runs a small suite of built-in tests.
 
 
 ## Test
